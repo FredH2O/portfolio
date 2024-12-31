@@ -1,9 +1,10 @@
 const Navbar = () => {
   return (
-    <nav className="flex z-20 justify-between text-gray-600 items-center px-4 py-2 bg-gray-100">
+    <nav className="flex z-20 justify-between text-gray-600 items-center px-4 py-2 bg-white">
       {/* Logo Section */}
       <div className="flex items-center">
-        <img src="" alt="Logo" className="h-8 w-8" />
+        {/* <img src="/images/thefredlogo.png" alt="Logo" className="h-8 w-8" /> */}
+        <h2 className="text-xl font-extrabold uppercase">Fred//dev</h2>
       </div>
 
       {/* Navigation Links */}

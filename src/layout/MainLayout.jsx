@@ -1,5 +1,6 @@
 import HeroSection from "../components/HeroSection";
-import Header from "./Header";
+import Header from "../components/Header";
+import AboutMe from "../components/AboutMe";
 
 const MainLayout = () => {
   return (
@@ -7,6 +8,7 @@ const MainLayout = () => {
       <Header />
       <main>
         <HeroSection />
+        <AboutMe />
       </main>
     </>
   );
