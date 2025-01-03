@@ -1,4 +1,5 @@
 import BorderStyling from "./BorderStyling";
+import projects from "../data/Projects";
 
 const Projects = () => {
   return (
@@ -10,21 +11,18 @@ const Projects = () => {
         </p>
         <BorderStyling />
       </div>
-      <div className="grid grid-cols-2">
-        <img className="w-32 h-32" src="" alt="" />
-        <div>
-          <h3 className="text-3xl font-semibold">Project 1</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-            minima expedita tenetur reiciendis repellat commodi quibusdam, vero
-            laboriosam. Voluptatum aspernatur quis ab officiis natus odio id
-            eveniet nesciunt nihil exercitationem!
-          </p>
-          <button className="rounded p-2 hover:bg-rose-600 bg-rose-500">
-            Check it out!
-          </button>
+      {projects.map((proj, index) => (
+        <div key={index} className="grid grid-cols-2">
+          <img className="w-32 h-32" src={proj.image} alt={proj.title} />
+          <div>
+            <h3 className="text-3xl font-semibold">{projects.title}</h3>
+            <p>{proj.description}</p>
+            <button className="rounded p-2 hover:bg-rose-600 bg-rose-500">
+              Check it out!
+            </button>
+          </div>
         </div>
-      </div>
+      ))}
     </section>
   );
 };

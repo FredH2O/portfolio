@@ -18,12 +18,12 @@ const AboutMe = () => {
           <h3 className="text-2xl font-bold lg:text-left text-center">
             My Skills
           </h3>
-          <ul className="flex flex-wrap gap-3 py-3 justify-center lg:justify-start">
+          <ul className="flex flex-wrap gap-3 lg:p-10 py-10 px-1  justify-center lg:justify-start">
             {[
               "HTML5",
               "CSS3",
               "JavaScript",
-              "React.js",
+              "React",
               "TailwindCSS",
               "Bootstrap",
               "GIT",
