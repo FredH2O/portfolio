@@ -40,7 +40,6 @@ const AboutMe = () => {
             ))}
           </ul>
         </div>
-
         {/* About Me Section */}
         <div className="p-5 text-center lg:text-left">
           <h3 className="text-2xl font-semibold mb-3">

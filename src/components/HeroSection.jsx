@@ -1,5 +1,4 @@
 import SideBarSocials from "./SideBarSocials";
-import wallpaper from "/images/hero-wallpaper2.jpg";
 import me from "/images/me.png";
 import Waves from "./Waves";
 

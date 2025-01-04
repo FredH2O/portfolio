@@ -1,4 +1,6 @@
 import moonway from "../images/moonway-travel-image.png";
+import cafe from "../images/cafe-bianco-image.png";
+import flextrap from "../images/flex-trap-clothing.png";
 
 const projects = [
   {
@@ -9,14 +11,14 @@ const projects = [
     link: "https://fredh2o.github.io/moonway-travel/",
   },
   {
-    image: "",
+    image: cafe,
     title: "Café Bianco",
     description:
       "A stylish landing page for a café, highlighting its menu and ambiance with a clean, modern design.",
     link: "https://fredh2o.github.io/cafe-bianco",
   },
   {
-    image: "",
+    image: flextrap,
     title: "Flex Trap Clothing",
     description:
       "An e-commerce demo for a clothing brand, featuring a trendy design and user-friendly layout.",

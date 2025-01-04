@@ -12,10 +12,13 @@ const Projects = () => {
         <BorderStyling />
       </div>
       {projects.map((proj, index) => (
-        <div key={index} className="grid grid-cols-2">
-          <img className="w-32 h-32" src={proj.image} alt={proj.title} />
+        <div
+          key={index}
+          className="container grid grid-cols-2 place-items-center border-2 items-center justify-center"
+        >
+          <img className="w-3/4" src={proj.image} alt={proj.title} />
           <div>
-            <h3 className="text-3xl font-semibold">{projects.title}</h3>
+            <h3 className="text-3xl font-semibold">{proj.title}</h3>
             <p>{proj.description}</p>
             <button className="rounded p-2 hover:bg-rose-600 bg-rose-500">
               Check it out!
