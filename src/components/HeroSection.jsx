@@ -6,6 +6,7 @@ const HeroSection = () => {
   return (
     <section className="relative h-screen flex justify-center">
       {/* background and overlay */}
+      <div className="absolute inset-0 z-20 bg-white/5 backdrop-blur-sm"></div>
       <Waves
         lineColor="rgba(244, 63, 94, 0.3)"
         backgroundColor="rgba(0, 0, 0, 1)"
@@ -16,13 +17,13 @@ const HeroSection = () => {
         friction={0.9}
         tension={0.01}
         maxCursorMove={120}
-        xGap={12}
+        xGap={15}
         yGap={36}
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-10"
       />
       <SideBarSocials />
       {/* hero content */}
-      <div className="relative gap-7 z-0 flex flex-col xl:flex-row items-center justify-center h-full xl:text-left text-center text-white px-4">
+      <div className="relative gap-7 z-20 flex flex-col xl:flex-row items-center justify-center h-full xl:text-left text-center text-white px-4">
         <div className="w-52 h-52 rounded-full overflow-hidden border-2 border-white shadow-lg">
           <img className="w-full h-full object-cover" src={me} alt="Fred" />
         </div>

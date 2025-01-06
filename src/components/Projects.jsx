@@ -14,13 +14,13 @@ const Projects = () => {
       {projects.map((proj, index) => (
         <div
           key={index}
-          className="container grid grid-cols-2 place-items-center border-2 items-center justify-center"
+          className="container grid grid-cols-2 place-items-center items-center justify-center"
         >
           <img className="w-3/4" src={proj.image} alt={proj.title} />
-          <div>
+          <div className="h-full flex flex-col space-y-7 justify-center items-center gap-2 p-2">
             <h3 className="text-3xl font-semibold">{proj.title}</h3>
-            <p>{proj.description}</p>
-            <button className="rounded p-2 hover:bg-rose-600 bg-rose-500">
+            <p className="w-2/3">{proj.description}</p>
+            <button className="rounded p-2 hover:bg-rose-600 bg-rose-500 w-1/2">
               Check it out!
             </button>
           </div>

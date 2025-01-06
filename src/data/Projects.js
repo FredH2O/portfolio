@@ -1,6 +1,7 @@
 import moonway from "../images/moonway-travel-image.png";
 import cafe from "../images/cafe-bianco-image.png";
 import flextrap from "../images/flex-trap-clothing.png";
+import plantcare from "../images/plant-care-guide.png";
 
 const projects = [
   {
@@ -25,7 +26,7 @@ const projects = [
     link: "https://fredh2o.github.io/Flex-Trap-Clothing.co/",
   },
   {
-    image: "",
+    image: plantcare,
     title: "Plant Care",
     description:
       "A web app for houseplant enthusiasts, providing tips on care, origins, and temperature requirements for various plants.",

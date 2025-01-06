@@ -2,6 +2,7 @@ import HeroSection from "../components/HeroSection";
 import Header from "../components/Header";
 import AboutMe from "../components/AboutMe";
 import Projects from "../components/Projects";
+import Footer from "../components/Footer";
 
 const MainLayout = () => {
   return (
@@ -19,6 +20,7 @@ const MainLayout = () => {
           <Projects />
         </div>
       </main>
+      <Footer />
     </>
   );
 };
