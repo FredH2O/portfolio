@@ -2,7 +2,7 @@ import Navbar from "./Navbar";
 
 const Header = () => {
   return (
-    <header className="absolute top-0 z-50 w-full shadow-md">
+    <header className="fixed top-0 z-50 w-full shadow-md">
       <Navbar />
     </header>
   );

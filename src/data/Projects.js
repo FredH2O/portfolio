@@ -6,7 +6,7 @@ import plantcare from "../images/plant-care-guide.png";
 const projects = [
   {
     image: moonway,
-    title: "Moonway Travel",
+    title: "Moonway Travels",
     description:
       "A single-page travel application showcasing hotels with information fetched dynamically. Built with React, Tailwind CSS, and Axios.",
     link: "https://fredh2o.github.io/moonway-travel/",

@@ -5,7 +5,7 @@ const AboutMe = () => {
     <section className="py-10 px-4 rounded">
       <div className="text-center mb-8 flex flex-col items-center">
         <h2 className="text-4xl font-semibold">About Me</h2>
-        <p className="mt-4 text-lg text-gray-600">
+        <p className="mt-4 text-lg text-gray-600 dark:text-white">
           Here, you can learn more about me, what I do, and my skills, with a
           focus on programming and technology.
         </p>
@@ -45,7 +45,7 @@ const AboutMe = () => {
           <h3 className="text-2xl font-semibold mb-3">
             The Developer Behind the Code.
           </h3>
-          <p className="text-lg leading-relaxed text-gray-600">
+          <p className="text-lg leading-relaxed text-gray-600 dark:text-white">
             I am a Junior Front-End Developer passionate about creating
             user-focused and visually engaging web applications. My interest in
             web development began while working as a warehouse operative, where

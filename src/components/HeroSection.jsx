@@ -1,14 +1,22 @@
 import SideBarSocials from "./SideBarSocials";
 import me from "/images/me.png";
 import Waves from "./Waves";
+import { Theme } from "../context/Theme";
+import { useContext } from "react";
 
 const HeroSection = () => {
+  const { theme } = useContext(Theme);
+
   return (
     <section className="relative h-screen flex justify-center">
       {/* background and overlay */}
       <div className="absolute inset-0 z-20 bg-white/5 backdrop-blur-sm"></div>
       <Waves
-        lineColor="rgba(244, 63, 94, 0.3)"
+        lineColor={
+          theme === "dark"
+            ? "rgba(250, 250, 250, 0.3)"
+            : "rgba(244, 63, 94, 0.3)"
+        }
         backgroundColor="rgba(0, 0, 0, 1)"
         waveSpeedX={0.02}
         waveSpeedY={0.01}

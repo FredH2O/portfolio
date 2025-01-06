@@ -1,4 +1,5 @@
 import { useState } from "react";
+import DarkAndLightButton from "./DarkAndLightButton";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -48,6 +49,7 @@ const Navbar = () => {
             CONTACT
           </a>
         </li>
+        <DarkAndLightButton />
       </ul>
     </nav>
   );
