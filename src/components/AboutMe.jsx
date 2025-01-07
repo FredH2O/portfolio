@@ -1,4 +1,56 @@
 import BorderStyling from "./BorderStyling";
+import Stack from "./Stack";
+import html5Image from "../images/html5.svg";
+import css3Image from "../images/css3.svg";
+import javascriptImage from "../images/javascript.svg";
+import reactImage from "../images/react.svg";
+import tailwindImage from "../images/tailwind.svg";
+import bootstrapImage from "../images/bootstrap.svg";
+import materialuiImage from "../images/materialui.svg";
+import responsiveImage from "../images/responsive.svg";
+
+const images = [
+  {
+    id: 8,
+    img: responsiveImage,
+    title: "Responsive",
+  },
+  {
+    id: 7,
+    img: materialuiImage,
+    title: "MaterialUI",
+  },
+  {
+    id: 6,
+    img: bootstrapImage,
+    title: "Bootstrap",
+  },
+  {
+    id: 5,
+    img: tailwindImage,
+    title: "TailwindCSS",
+  },
+  {
+    id: 4,
+    img: reactImage,
+    title: "React",
+  },
+  {
+    id: 3,
+    img: javascriptImage,
+    title: "JavaScript",
+  },
+  {
+    id: 2,
+    img: css3Image,
+    title: "CSS3",
+  },
+  {
+    id: 1,
+    img: html5Image,
+    title: "HTML5",
+  },
+];
 
 const AboutMe = () => {
   return (
@@ -16,9 +68,9 @@ const AboutMe = () => {
         {/* Skills Section */}
         <div className="p-4 flex flex-col">
           <h3 className="text-2xl font-bold lg:text-left text-center">
-            My Skills
+            My Tech Stack
           </h3>
-          <ul className="flex flex-wrap gap-3 lg:p-10 py-10 px-1  justify-center lg:justify-start">
+          {/* <ul className="flex flex-wrap gap-3 lg:p-10 py-10 px-1  justify-center lg:justify-start">
             {[
               "HTML5",
               "CSS3",
@@ -38,7 +90,13 @@ const AboutMe = () => {
                 {skill}
               </li>
             ))}
-          </ul>
+          </ul> */}
+          <Stack
+            randomRotation={false}
+            sensitivity={180}
+            cardDimensions={{ width: 450, height: 450 }}
+            cardsData={images}
+          />
         </div>
         {/* About Me Section */}
         <div className="p-5 text-center lg:text-left">
