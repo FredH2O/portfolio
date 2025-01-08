@@ -66,35 +66,14 @@ const AboutMe = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Skills Section */}
-        <div className="p-4 flex flex-col">
+        <div className="p-4 flex flex-col ">
           <h3 className="text-2xl font-bold lg:text-left text-center">
             My Tech Stack
           </h3>
-          {/* <ul className="flex flex-wrap gap-3 lg:p-10 py-10 px-1  justify-center lg:justify-start">
-            {[
-              "HTML5",
-              "CSS3",
-              "JavaScript",
-              "React",
-              "TailwindCSS",
-              "Bootstrap",
-              "GIT",
-              "Github",
-              "Responsive Design",
-              "MaterialUI",
-            ].map((skill, index) => (
-              <li
-                key={index}
-                className="bg-gray-400 text-white rounded px-5 py-2 hover:bg-gray-600 transition-colors"
-              >
-                {skill}
-              </li>
-            ))}
-          </ul> */}
           <Stack
             randomRotation={false}
             sensitivity={180}
-            cardDimensions={{ width: 450, height: 450 }}
+            cardDimensions={{ width: "100%", height: 400 }}
             cardsData={images}
           />
         </div>

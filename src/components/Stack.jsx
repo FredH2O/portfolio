@@ -1,6 +1,6 @@
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { useState } from "react";
-import "./Stack.css";
+import styles from "./Stack.module.css";
 
 function CardRotate({ children, onSendToBack, sensitivity }) {
   const x = useMotionValue(0);
@@ -22,7 +22,7 @@ function CardRotate({ children, onSendToBack, sensitivity }) {
 
   return (
     <motion.div
-      className="card-rotate"
+      className={styles["card-rotate"]}
       style={{ x, y, rotateX, rotateY }}
       drag
       dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
@@ -56,7 +56,7 @@ export default function Stack({
 
   return (
     <div
-      className="stack-container"
+      className={styles["stack-container"]}
       style={{
         width: cardDimensions.width,
         height: cardDimensions.height,
@@ -75,7 +75,7 @@ export default function Stack({
             sensitivity={sensitivity}
           >
             <motion.div
-              className="card group"
+              className={`${styles.card} group`}
               animate={{
                 rotateZ: (cards.length - index - 1) * 4 + randomRotate,
                 scale: 1 + index * 0.06 - cards.length * 0.06,
@@ -95,7 +95,7 @@ export default function Stack({
               <img
                 src={card.img}
                 alt={`card-${card.title}`}
-                className="card-image object-fill rounded"
+                className={styles["card-image"]}
                 title={card.title}
               />
             </motion.div>
