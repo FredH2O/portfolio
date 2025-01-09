@@ -1,4 +1,5 @@
 import BorderStyling from "./BorderStyling";
+import TiltedScroll from "./TiltedScroll";
 
 const AboutMe = () => {
   return (
@@ -17,6 +18,7 @@ const AboutMe = () => {
           <h3 className="text-2xl font-bold lg:text-left text-center">
             My Tech Stack
           </h3>
+          <TiltedScroll />
           <p className="text-slate-600 font-thin lg:text-left text-center text-xs italic"></p>
         </div>
         <div className="p-5 text-center lg:text-left">
