@@ -6,7 +6,7 @@ const Projects = () => {
     <section>
       <div className="text-center my-32 space-y-3 flex flex-col items-center">
         <h2 className="uppercase font-bold text-4xl">Projects</h2>
-        <p className="text-gray-600 dark:text-white max-w-screen-md">
+        <p className="w-2/3 text-gray-600 dark:text-white">
           Welcome to my project showcase! As a new frontend developer, I'm
           excited to share the work I've been doing. Check out my projects to
           see how I'm learning and growing in the field!
@@ -18,7 +18,7 @@ const Projects = () => {
           key={index}
           className="container grid lg:grid-cols-2 grid-cols-1 place-items-center items-center justify-center"
         >
-          <img className="w-2/4" src={proj.image} alt={proj.title} />
+          <img className="w-3/4" src={proj.image} alt={proj.title} />
           <div className="h-full flex flex-col space-y-7 justify-center items-center gap-2 p-2">
             <h3 className="text-3xl font-semibold">{proj.title}</h3>
             <p className="w-2/3">{proj.description}</p>

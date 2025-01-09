@@ -1,56 +1,4 @@
 import BorderStyling from "./BorderStyling";
-import Stack from "./Stack";
-import html5Image from "../images/html5.svg";
-import css3Image from "../images/css3.svg";
-import javascriptImage from "../images/javascript.svg";
-import reactImage from "../images/react.svg";
-import tailwindImage from "../images/tailwind.svg";
-import bootstrapImage from "../images/bootstrap.svg";
-import materialuiImage from "../images/materialui.svg";
-import responsiveImage from "../images/responsive.svg";
-
-const images = [
-  {
-    id: 8,
-    img: responsiveImage,
-    title: "Responsive",
-  },
-  {
-    id: 7,
-    img: materialuiImage,
-    title: "MaterialUI",
-  },
-  {
-    id: 6,
-    img: bootstrapImage,
-    title: "Bootstrap",
-  },
-  {
-    id: 5,
-    img: tailwindImage,
-    title: "TailwindCSS",
-  },
-  {
-    id: 4,
-    img: reactImage,
-    title: "React",
-  },
-  {
-    id: 3,
-    img: javascriptImage,
-    title: "JavaScript",
-  },
-  {
-    id: 2,
-    img: css3Image,
-    title: "CSS3",
-  },
-  {
-    id: 1,
-    img: html5Image,
-    title: "HTML5",
-  },
-];
 
 const AboutMe = () => {
   return (
@@ -65,19 +13,12 @@ const AboutMe = () => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Skills Section */}
         <div className="p-4 flex flex-col ">
           <h3 className="text-2xl font-bold lg:text-left text-center">
             My Tech Stack
           </h3>
-          <Stack
-            randomRotation={false}
-            sensitivity={180}
-            cardDimensions={{ width: "100%", height: 400 }}
-            cardsData={images}
-          />
+          <p className="text-slate-600 font-thin lg:text-left text-center text-xs italic"></p>
         </div>
-        {/* About Me Section */}
         <div className="p-5 text-center lg:text-left">
           <h3 className="text-2xl font-semibold mb-3">
             The Developer Behind the Code.
