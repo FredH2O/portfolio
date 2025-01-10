@@ -1,7 +1,7 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 const SideBarSocials = () => {
   return (
-    <div className="absolute h-screen z-20 left-0 md:flex hidden flex-col justify-center">
+    <div className="absolute h-screen z-20 right-0 md:flex hidden flex-col justify-center">
       <div className="rounded bg-white border-2 flex items-center justify-center flex-col">
         <a
           href="https://github.com/FredH2O"

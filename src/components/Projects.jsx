@@ -22,7 +22,7 @@ const Projects = () => {
           <div className="h-full flex flex-col space-y-7 justify-center items-center gap-2 p-2">
             <h3 className="text-3xl font-semibold">{proj.title}</h3>
             <p className="w-2/3">{proj.description}</p>
-            <button className="rounded p-2 hover:bg-rose-600 bg-rose-500 w-1/2">
+            <button className="rounded p-2 text-white hover:bg-rose-600 bg-rose-500 w-1/2">
               Check it out!
             </button>
           </div>

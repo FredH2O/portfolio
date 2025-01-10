@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import AboutMe from "../components/AboutMe";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
+import Contact from "../components/Contact";
 
 const MainLayout = () => {
   return (
@@ -15,11 +16,13 @@ const MainLayout = () => {
             <AboutMe />
           </div>
         </div>
-        <div className="dark:bg-zinc-800 dark:text-white duration-200">
+
+        <div className="bg-white dark:bg-zinc-800 dark:text-white duration-200">
           <div className="container mx-auto py-5">
             <Projects />
           </div>
         </div>
+        <Contact />
       </main>
       <Footer />
     </>

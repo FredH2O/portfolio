@@ -9,17 +9,15 @@ const HeroSection = () => {
 
   return (
     <section className="relative h-screen flex justify-center">
-      <div className="absolute w-full h-full dark:bg-slate-700 bg-black">
-        <div className="absolute inset-0 dark:bg-black bg-slate-600 opacity-80 z-10"></div>
+      <div className="absolute inset-0 dark:bg-black bg-slate-700 opacity-80"></div>
 
-        <Squares
-          speed={0.1}
-          squareSize={30}
-          direction="diagonal" // up, down, left, right, diagonal
-          borderColor={theme === "dark" ? "#F43F5E" : "grey"}
-          hoverFillColor="#F43F5E"
-        />
-      </div>
+      <Squares
+        speed={0.1}
+        squareSize={30}
+        direction="down" // up, down, left, right, diagonal
+        borderColor={theme === "dark" ? "#F43F5E" : "grey"}
+        hoverFillColor="#F43F5E"
+      />
 
       <SideBarSocials />
       {/* hero content */}
