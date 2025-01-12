@@ -14,8 +14,8 @@ const HeroSection = () => {
       <Squares
         speed={0.1}
         squareSize={30}
-        direction="down" // up, down, left, right, diagonal
-        borderColor={theme === "dark" ? "#F43F5E" : "grey"}
+        direction="diagonal" // up, down, left, right, diagonal
+        borderColor={theme === "dark" ? "#475569" : "grey"}
         hoverFillColor="#F43F5E"
       />
 
