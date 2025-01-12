@@ -12,7 +12,7 @@ const portfolioRouter = createBrowserRouter([
 function App() {
   return (
     <>
-      <MainLayout />
+      <RouterProvider router={portfolioRouter} />
     </>
   );
 }

@@ -7,6 +7,9 @@
     @apply font-poppins;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
 
 .burger {
   position: relative;

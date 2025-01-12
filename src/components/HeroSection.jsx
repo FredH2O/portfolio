@@ -4,11 +4,11 @@ import { Theme } from "../context/Theme";
 import { useContext } from "react";
 import Squares from "./Squares";
 
-const HeroSection = () => {
+const HeroSection = ({ id }) => {
   const { theme } = useContext(Theme);
 
   return (
-    <section className="relative h-screen flex justify-center">
+    <section id={id} className="relative h-screen flex justify-center">
       <div className="absolute inset-0 dark:bg-black bg-slate-700 opacity-80"></div>
 
       <Squares
@@ -21,7 +21,7 @@ const HeroSection = () => {
 
       <SideBarSocials />
       {/* hero content */}
-      <div className="relative gap-7 z-20 flex flex-col xl:flex-row items-center justify-center h-full xl:text-left text-center text-white px-4">
+      <div className="relative gap-7 z-20 flex flex-col xl:flex-row container justify-center items-center m-auto w-auto xl:text-left text-center text-white px-4">
         <div className="w-52 h-52 rounded-full overflow-hidden border-2 border-white shadow-lg">
           <img className="w-full h-full object-cover" src={me} alt="Fred" />
         </div>
@@ -34,7 +34,10 @@ const HeroSection = () => {
             Junior Front-End Developer with a passion for learning, discovering
             new tech, and creating cool web projects.
           </p>
-          <button className="uppercase hover:-translate-y-0.5 duration-300 ease-in-out tracking-wider rounded text-lg w-36 p-2 font-bold mt-4 bg-rose-500">
+          <button
+            aria-label="View Projects"
+            className="uppercase hover:-translate-y-0.5 duration-300 ease-in-out tracking-wider rounded text-lg w-36 p-2 font-bold mt-4 bg-rose-500"
+          >
             Projects
           </button>
         </div>

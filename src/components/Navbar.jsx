@@ -1,5 +1,6 @@
 import { useState } from "react";
 import DarkAndLightButton from "./DarkAndLightButton";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,24 +31,44 @@ const Navbar = () => {
         } transition-transform duration-200 md:static md:transform-none md:flex md:gap-4 md:items-center md:font-bold md:space-x-5`}
       >
         <li className="border-b md:border-none p-4 md:p-0">
-          <a href="" className="hover:text-rose-500">
+          <Link
+            to="home"
+            smooth={true}
+            duration={500}
+            className="hover:text-rose-500 cursor-pointer"
+          >
             HOME
-          </a>
+          </Link>
         </li>
         <li className="border-b md:border-none p-4 md:p-0">
-          <a href="" className="hover:text-rose-500">
+          <Link
+            to="about"
+            smooth={true}
+            duration={500}
+            className="hover:text-rose-500 cursor-pointer"
+          >
             ABOUT
-          </a>
+          </Link>
         </li>
         <li className="border-b md:border-none p-4 md:p-0">
-          <a href="" className="hover:text-rose-500">
+          <Link
+            to="projects"
+            smooth={true}
+            duration={500}
+            className="hover:text-rose-500 cursor-pointer"
+          >
             PROJECTS
-          </a>
+          </Link>
         </li>
         <li className="p-4 md:p-0">
-          <a href="" className="hover:text-rose-500">
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
+            className="hover:text-rose-500 cursor-pointer"
+          >
             CONTACT
-          </a>
+          </Link>
         </li>
         <DarkAndLightButton />
       </ul>
