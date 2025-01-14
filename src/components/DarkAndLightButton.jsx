@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { Theme } from "../context/Theme";
+import { useTheme } from "../context/Theme";
 
 const DarkAndLightButton = () => {
-  const { theme, toggleThemeMode } = useContext(Theme);
+  const { theme, toggleThemeMode } = useTheme();
 
   return (
     <label className="inline-flex items-center relative">

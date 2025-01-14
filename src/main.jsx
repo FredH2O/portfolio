@@ -4,11 +4,14 @@ import "./index.css";
 import App from "./App.jsx";
 import "@fontsource/poppins";
 import { ThemeProvider } from "./context/Theme.jsx";
+import { ModalProvider } from "./context/ModalContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <ThemeProvider>
-      <App />
+      <ModalProvider>
+        <App />
+      </ModalProvider>
     </ThemeProvider>
   </StrictMode>
 );

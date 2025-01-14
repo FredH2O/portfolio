@@ -1,11 +1,10 @@
 import SideBarSocials from "./SideBarSocials";
 import me from "/images/me.png";
-import { Theme } from "../context/Theme";
-import { useContext } from "react";
+import { useTheme } from "../context/Theme";
 import Squares from "./Squares";
 
 const HeroSection = ({ id }) => {
-  const { theme } = useContext(Theme);
+  const { theme } = useTheme();
 
   return (
     <section id={id} className="relative h-screen flex justify-center">
