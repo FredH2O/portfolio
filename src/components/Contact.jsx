@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import Squares from "./Squares";
 import { useTheme } from "../context/Theme";
 import { useModal } from "../context/ModalContext";
@@ -98,8 +98,8 @@ const Contact = () => {
               value={formData.message}
               onChange={handleChange}
               rows="6"
-              maxLength="500"
-              className="border-2 bg-gray-200 rounded p-5"
+              maxLength="280"
+              className="border-2 bg-gray-200 rounded p-5 resize-none"
               required
             ></textarea>
             <button
