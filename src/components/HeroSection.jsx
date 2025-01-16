@@ -37,7 +37,7 @@ const HeroSection = ({ id }) => {
             aria-label="View Projects"
             className="uppercase hover:-translate-y-0.5 duration-300 ease-in-out tracking-wider rounded text-lg w-36 p-2 font-bold mt-4 bg-rose-500"
           >
-            Projects
+            Resumé
           </button>
         </div>
       </div>
