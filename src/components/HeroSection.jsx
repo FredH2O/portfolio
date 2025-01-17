@@ -1,6 +1,7 @@
+import { useTheme } from "../context/Theme";
+import { DocumentArrowDownIcon } from "@heroicons/react/24/outline";
 import SideBarSocials from "./SideBarSocials";
 import me from "/images/me.png";
-import { useTheme } from "../context/Theme";
 import Squares from "./Squares";
 
 const HeroSection = ({ id }) => {
@@ -33,12 +34,15 @@ const HeroSection = ({ id }) => {
             Junior Front-End Developer with a passion for learning, discovering
             new tech, and creating cool web projects.
           </p>
-          <button
-            aria-label="View Projects"
-            className="uppercase hover:-translate-y-0.5 duration-300 ease-in-out tracking-wider rounded text-lg w-36 p-2 font-bold mt-4 bg-rose-500"
+          <a
+            href="/cv/2025CV.pdf"
+            download="Frederico-Huertas-CV.pdf"
+            aria-label="View CV"
+            className="flex flex-row cursor-pointer justify-center items-center gap-x-2 rounded-md uppercase hover:-translate-y-0.5 duration-300 ease-in-out tracking-wider w-auto p-2 mt-4 bg-rose-600 hover:border-2 hover:bg-rose-500"
           >
-            Resumé
-          </button>
+            Download CV{" "}
+            <DocumentArrowDownIcon className="animate-bounce" width={24} />
+          </a>
         </div>
       </div>
     </section>

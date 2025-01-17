@@ -4,6 +4,7 @@ import AboutMe from "../components/AboutMe";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
 import Contact from "../components/Contact";
+import OtherProjectsButton from "../components/OtherProjectsButton";
 
 const MainLayout = () => {
   return (
@@ -20,6 +21,7 @@ const MainLayout = () => {
         <div className="bg-white dark:bg-zinc-800 dark:text-white duration-200">
           <div className="container mx-auto py-5" id="projects">
             <Projects />
+            <OtherProjectsButton />
           </div>
         </div>
         <div id="contact">
