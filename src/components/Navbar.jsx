@@ -1,5 +1,5 @@
 import { useState } from "react";
-import DarkAndLightButton from "./DarkAndLightButton";
+import DarkAndLightButton from "./Buttons/DarkAndLightButton";
 import { Link } from "react-scroll";
 
 const Navbar = () => {

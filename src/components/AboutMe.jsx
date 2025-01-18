@@ -6,7 +6,7 @@ const AboutMe = () => {
     <section className="py-10 px-4 rounded">
       <div className="text-center mb-8 flex flex-col items-center">
         <h2 className="text-4xl font-semibold">About Me</h2>
-        <p className="mt-4 text-lg text-gray-600 dark:text-white">
+        <p className="mt-4 text-lg text-gray-600 dark:text-white px-6">
           Here, you can learn more about me, what I do, and my skills, with a
           focus on programming and technology.
         </p>
@@ -14,14 +14,14 @@ const AboutMe = () => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div className="p-4 flex flex-col ">
+        <div className="px-6 flex flex-col ">
           <h3 className="text-2xl font-bold lg:text-left text-center">
             My Tech Stack
           </h3>
           <TiltedScroll />
           <p className="text-slate-600 font-thin lg:text-left text-center text-xs italic"></p>
         </div>
-        <div className="p-5 text-center lg:text-left">
+        <div className="px-6 text-center lg:text-left">
           <h3 className="text-2xl font-semibold mb-3">
             The Developer Behind the Code.
           </h3>

@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { useTheme } from "../context/Theme";
+import React from "react";
+import { useTheme } from "../../context/Theme";
 
 const DarkAndLightButton = () => {
   const { theme, toggleThemeMode } = useTheme();

@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import UiverseButton from "./UIVerseButton";
+import NextButton from "./Buttons/NextButton";
 
 const OtherProjectsButton = () => {
   return (
     <div className="flex justify-end mt-32">
       <Link>
-        <UiverseButton className="animate-bounce" name={"Other Projects"} />
+        <NextButton title={"Other Projects"} />
       </Link>
     </div>
   );
