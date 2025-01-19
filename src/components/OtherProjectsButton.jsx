@@ -3,7 +3,7 @@ import NextButton from "./Buttons/NextButton";
 
 const OtherProjectsButton = () => {
   return (
-    <div className="flex justify-end mt-32">
+    <div className="flex md:justify-end mt-28 pb-12 px-12 w-full justify-center">
       <Link>
         <NextButton title={"Other Projects"} />
       </Link>

@@ -3,8 +3,12 @@ import styles from "./NextButton.module.css";
 const NextButton = ({ title }) => {
   return (
     <button className={styles.cta}>
-      <span className={styles["hover-underline-animation"]}> {title} </span>
+      <span className={`${styles["hover-underline-animation"]} text-slate-400`}>
+        {" "}
+        {title}{" "}
+      </span>
       <svg
+        className="fill-slate-400"
         id="arrow-horizontal"
         xmlns="http://www.w3.org/2000/svg"
         width="30"
