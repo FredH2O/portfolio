@@ -1,9 +1,12 @@
 import { useState } from "react";
 import DarkAndLightButton from "./Buttons/DarkAndLightButton";
 import { Link } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
+import { usePage } from "../context/PageContext";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { page, handlePage } = usePage();
 
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
@@ -39,15 +42,23 @@ const Navbar = () => {
         } transition-transform duration-200 md:static md:transform-none md:flex md:gap-4 md:items-center md:font-bold md:space-x-5`}
       >
         <li className="border-b md:border-none p-4 md:p-0">
-          <Link
-            to="home"
-            smooth={true}
-            duration={500}
-            className="hover:text-rose-500 cursor-pointer"
-            onClick={toggleMenu}
-          >
-            HOME
-          </Link>
+          {page ? (
+            <RouterLink to="/">
+              <a className="hover:text-rose-500" onClick={handlePage}>
+                HOME
+              </a>
+            </RouterLink>
+          ) : (
+            <Link
+              to="home"
+              smooth={true}
+              duration={500}
+              className="hover:text-rose-500 cursor-pointer"
+              onClick={toggleMenu}
+            >
+              HOME
+            </Link>
+          )}
         </li>
         <li className="border-b md:border-none p-4 md:p-0">
           <Link
