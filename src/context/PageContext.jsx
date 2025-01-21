@@ -14,7 +14,7 @@ export const PageProvider = ({ children }) => {
   };
 
   return (
-    <PageContext.Provider value={{ page, handlePage }}>
+    <PageContext.Provider value={{ page, handlePage, setPage }}>
       {children}
     </PageContext.Provider>
   );
