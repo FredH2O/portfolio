@@ -2,6 +2,7 @@ import SpotlightCard from "../components/SpotlightCard";
 import OtherProjectsData from "../data/OtherProjects.js";
 import { usePage } from "../context/PageContext.jsx";
 import { useLocation } from "react-router-dom";
+import BorderStyling from "../components/BorderStyling.jsx";
 
 const OtherProjectsPage = () => {
   const { page, setPage } = usePage();
@@ -14,8 +15,17 @@ const OtherProjectsPage = () => {
   }
 
   return (
-    <section className="py-32 dark:bg-zinc-900">
-      <div className="container m-auto grid lg:grid-cols-4 gap-3 md:grid-cols-2">
+    <section className="py-32 dark:bg-zinc-900 bg-slate-100">
+      <div className="text-slate-700 dark:text-slate-100 text-center flex flex-col justify-center items-center py-12">
+        <h2 className="text-3xl uppercase font-bold ">Projects</h2>
+        <p>
+          Here are some of my other projects. Please note that some may have
+          bugs, and I'm still learning and improving!
+        </p>
+        <BorderStyling />
+      </div>
+
+      <div className="container m-auto grid place-items-center xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 p-3 gap-5">
         {page &&
           OtherProjectsData.map((project, index) => (
             <SpotlightCard
@@ -23,6 +33,7 @@ const OtherProjectsPage = () => {
               image={project.image}
               title={project.title}
               description={project.description}
+              link={project.link}
             />
           ))}
       </div>

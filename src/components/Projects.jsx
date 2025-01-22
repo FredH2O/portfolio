@@ -27,7 +27,9 @@ const Projects = () => {
             <p className="w-2/3">{proj.description}</p>
             <div className="w-full flex lg:justify-end justify-center lg:px-24">
               <div>
-                <UiverseButton name={"Check it out!"} />
+                <a rel="noopener noreferrer" href={proj.link} target="_blank">
+                  <UiverseButton name={"Check it out!"} />
+                </a>
               </div>
             </div>
           </div>

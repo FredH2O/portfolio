@@ -1,12 +1,19 @@
 import { useState } from "react";
 import DarkAndLightButton from "./Buttons/DarkAndLightButton";
 import { Link } from "react-scroll";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useLocation } from "react-router-dom";
 import { usePage } from "../context/PageContext";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const { page, handlePage } = usePage();
+  const { page, handlePage, setPage } = usePage();
+  const location = useLocation();
+
+  if (location.pathname === "/") {
+    setPage(false);
+  } else {
+    setPage(true);
+  }
 
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
@@ -43,10 +50,12 @@ const Navbar = () => {
       >
         <li className="border-b md:border-none p-4 md:p-0">
           {page ? (
-            <RouterLink to="/">
-              <a className="hover:text-rose-500" onClick={handlePage}>
-                HOME
-              </a>
+            <RouterLink
+              className="hover:text-rose-500"
+              onClick={handlePage}
+              to="/"
+            >
+              HOME
             </RouterLink>
           ) : (
             <Link
@@ -60,39 +69,44 @@ const Navbar = () => {
             </Link>
           )}
         </li>
-        <li className="border-b md:border-none p-4 md:p-0">
-          <Link
-            to="about"
-            smooth={true}
-            duration={500}
-            className="hover:text-rose-500 cursor-pointer"
-            onClick={toggleMenu}
-          >
-            ABOUT
-          </Link>
-        </li>
-        <li className="border-b md:border-none p-4 md:p-0">
-          <Link
-            to="projects"
-            smooth={true}
-            duration={500}
-            className="hover:text-rose-500 cursor-pointer"
-            onClick={toggleMenu}
-          >
-            PROJECTS
-          </Link>
-        </li>
-        <li className="border-b md:border-none p-4 md:p-0">
-          <Link
-            to="contact"
-            smooth={true}
-            duration={500}
-            className="hover:text-rose-500 cursor-pointer"
-            onClick={toggleMenu}
-          >
-            CONTACT
-          </Link>
-        </li>
+        {page ? null : (
+          <>
+            <li className="border-b md:border-none p-4 md:p-0">
+              <Link
+                to="about"
+                smooth={true}
+                duration={500}
+                className="hover:text-rose-500 cursor-pointer"
+                onClick={toggleMenu}
+              >
+                ABOUT
+              </Link>
+            </li>
+            <li className="border-b md:border-none p-4 md:p-0">
+              <Link
+                to="projects"
+                smooth={true}
+                duration={500}
+                className="hover:text-rose-500 cursor-pointer"
+                onClick={toggleMenu}
+              >
+                PROJECTS
+              </Link>
+            </li>
+            <li className="border-b md:border-none p-4 md:p-0">
+              <Link
+                to="contact"
+                smooth={true}
+                duration={500}
+                className="hover:text-rose-500 cursor-pointer"
+                onClick={toggleMenu}
+              >
+                CONTACT
+              </Link>
+            </li>
+          </>
+        )}
+
         <li className="p-2 md:p-0">
           <DarkAndLightButton />
         </li>

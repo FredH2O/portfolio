@@ -1,21 +1,18 @@
-const SpotlightCard = ({ image, title, description }) => {
+const SpotlightCard = ({ image, title, description, link }) => {
   return (
-    <div className="flex flex-col max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className="flex flex-col h-full xl:max-w-lg lg:max-w-md md:max-w-lg max-w-sm bg-slate-50 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       {/* image */}
-      <div>
-        <a href="#">
-          <img className="rounded-t-lg" src={image} alt={title} />
-        </a>
+      <div className="relative">
+        <div className="absolute rounded-lg bg-slate-900 inset-0 opacity-25"></div>
+        <img className="rounded-t-lg" src={image} alt={title} />
       </div>
 
       <div className="p-5 flex flex-col h-full">
         {/* title */}
-        <div>
-          <a href="#">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              {title}
-            </h5>
-          </a>
+        <div className="">
+          <h5 className="w-max mb-3 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            {title}
+          </h5>
         </div>
 
         {/* description */}
@@ -28,8 +25,10 @@ const SpotlightCard = ({ image, title, description }) => {
         {/* button */}
         <div>
           <a
-            href="#"
-            className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            rel="noopener noreferrer"
+            target="_blank"
+            href={link}
+            className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-rose-500 rounded-lg hover:bg-rose-600 focus:ring-4 focus:outline-none focus:ring-rose-300 dark:bg-rose-600 dark:hover:bg-rose-700 dark:focus:ring-rose-800"
           >
             See more
             <svg
