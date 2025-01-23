@@ -3,27 +3,30 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import OtherProjectsPage from "./pages/OtherProjectsPage";
 import HomePage from "./pages/HomePage";
 
-const portfolioRouter = createBrowserRouter([
-  {
-    path: "/",
-    element: <MainLayout />,
-    children: [
-      {
-        path: "/",
-        element: <HomePage />,
-      },
-      {
-        path: "/Other-Projects",
-        element: <OtherProjectsPage />,
-      },
-    ],
-  },
-]);
+const portfolioRouter = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <MainLayout />,
+      children: [
+        {
+          path: "/",
+          element: <HomePage />,
+        },
+        {
+          path: "/Other-Projects",
+          element: <OtherProjectsPage />,
+        },
+      ],
+    },
+  ],
+  { basename: "/portfolio" }
+);
 
 function App() {
   return (
     <>
-      <RouterProvider router={portfolioRouter} basename="/portfolio" />
+      <RouterProvider router={portfolioRouter} />
     </>
   );
 }
