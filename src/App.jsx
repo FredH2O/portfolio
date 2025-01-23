@@ -6,15 +6,15 @@ import HomePage from "./pages/HomePage";
 const portfolioRouter = createBrowserRouter(
   [
     {
-      path: "/",
+      path: "",
       element: <MainLayout />,
       children: [
         {
-          path: "/",
+          path: "",
           element: <HomePage />,
         },
         {
-          path: "/Other-Projects",
+          path: "Other-Projects",
           element: <OtherProjectsPage />,
         },
       ],
