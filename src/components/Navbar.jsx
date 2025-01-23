@@ -1,19 +1,16 @@
 import { useState } from "react";
 import DarkAndLightButton from "./Buttons/DarkAndLightButton";
 import { Link } from "react-scroll";
-import { Link as RouterLink, useLocation } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import { usePage } from "../context/PageContext";
+import usePageUpdate from "../hooks/usePageUpdate";
+import { DocumentArrowDownIcon } from "@heroicons/react/24/outline";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const { page, handlePage, setPage } = usePage();
-  const location = useLocation();
+  const { page, handlePage } = usePage();
 
-  if (location.pathname === "/") {
-    setPage(false);
-  } else {
-    setPage(true);
-  }
+  usePageUpdate();
 
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
@@ -103,6 +100,18 @@ const Navbar = () => {
               >
                 CONTACT
               </Link>
+            </li>
+            <li className="border-b md:border-none p-4 md:p-0">
+              <a
+                href="/cv/2025CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View CV"
+                className="hover:text-rose-500 cursor-pointer"
+                onClick={toggleMenu}
+              >
+                CV
+              </a>
             </li>
           </>
         )}

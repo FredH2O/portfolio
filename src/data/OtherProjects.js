@@ -5,6 +5,7 @@ import jokeGenerator from "../images/joke-generator.png";
 import dogBreed from "../images/dog-info.png";
 import rockPaperScissors from "../images/rock-paper-scissors.png";
 import javascriptQuiz from "../images/javascript-quiz.png";
+import todolist from "../images/todo-list.png";
 
 const sanitizeURL = (url) => {
   try {
@@ -64,6 +65,13 @@ const otherproject = [
     description:
       "This is a simple quiz game built with HTML, CSS, and JavaScript. The game features multiple-choice questions and keeps track of the player's score. It also utilizes lodash for utility functions and Bootstrap Icons for a polished interface.",
     link: sanitizeURL("https://fredh2o.github.io/Javascript-Quiz/"),
+  },
+  {
+    image: todolist,
+    title: "To-Do List",
+    description:
+      "The To-Do List Web App helps users manage tasks with features to add, edit, delete, and mark tasks as complete. Built with JavaScript, HTML, and CSS, it includes a responsive design and uses Confetti.js for celebration when all tasks are done. To get started, clone the repo, navigate to the folder, and open index.html.",
+    link: sanitizeURL("https://fredh2o.github.io/To-Do-List/"),
   },
 ];
 

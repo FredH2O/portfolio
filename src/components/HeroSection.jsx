@@ -1,8 +1,8 @@
 import { useTheme } from "../context/Theme";
-import { DocumentArrowDownIcon } from "@heroicons/react/24/outline";
 import SideBarSocials from "./SideBarSocials";
 import me from "/images/me.png";
 import Squares from "./Squares";
+import TypingEffect from "react-typing-effect";
 
 const HeroSection = ({ id }) => {
   const { theme } = useTheme();
@@ -28,21 +28,17 @@ const HeroSection = ({ id }) => {
 
         <div className="flex flex-col space-y-5 items-center xl:items-start">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 uppercase">
-            Hey, I'm Fred.
+            <TypingEffect
+              text={[`Hey, I'm Fred.`]}
+              typingDelay={200}
+              speed={200}
+              eraseDelay={20000}
+            />
           </h1>
           <p className=" text-lg md:text-2xl lg:max-w-4xl">
             Junior Front-End Developer with a passion for learning, discovering
             new tech, and creating cool web projects.
           </p>
-          <a
-            href="/cv/2025CV.pdf"
-            download="Frederico-Huertas-CV.pdf"
-            aria-label="View CV"
-            className="flex flex-row cursor-pointer justify-center items-center gap-x-2 rounded-md uppercase hover:-translate-y-0.5 duration-300 ease-in-out tracking-wider w-auto p-2 mt-4 bg-rose-600 hover:border-2 hover:bg-rose-500"
-          >
-            Download CV{" "}
-            <DocumentArrowDownIcon className="animate-bounce" width={24} />
-          </a>
         </div>
       </div>
     </section>
