@@ -1,6 +1,6 @@
 import { useTheme } from "../context/Theme";
 import SideBarSocials from "./SideBarSocials";
-import me from "%PUBLIC_URL%/images/me.png";
+import me from "/images/me.png";
 import Squares from "./Squares";
 import TypingEffect from "react-typing-effect";
 
