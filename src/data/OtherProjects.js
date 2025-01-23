@@ -70,7 +70,7 @@ const otherproject = [
     image: todolist,
     title: "To-Do List",
     description:
-      "The To-Do List Web App helps users manage tasks with features to add, edit, delete, and mark tasks as complete. Built with JavaScript, HTML, and CSS, it includes a responsive design and uses Confetti.js for celebration when all tasks are done. To get started, clone the repo, navigate to the folder, and open index.html.",
+      "The To-Do List Web App helps manage tasks with features to add, edit, delete, and mark as complete. Built with JavaScript, HTML, and CSS, it’s responsive and uses Confetti.js to celebrate completing all tasks.",
     link: sanitizeURL("https://fredh2o.github.io/To-Do-List/"),
   },
 ];
