@@ -23,7 +23,7 @@ const portfolioRouter = createBrowserRouter([
 function App() {
   return (
     <>
-      <RouterProvider router={portfolioRouter} baseline="/portfolio" />
+      <RouterProvider router={portfolioRouter} basename="/portfolio" />
     </>
   );
 }
