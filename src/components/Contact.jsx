@@ -91,13 +91,12 @@ const Contact = () => {
             className="gap-2 flex flex-col container m-auto"
           >
             {/* name */}
-            <label htmlFor="name" className="">
-              Name
-            </label>
+            <label htmlFor="name">Name</label>
             <input
               type="text"
               id="name"
               name="name"
+              autoComplete="name"
               value={formData.name}
               onChange={handleChange}
               className="border-2 bg-gray-200 h-[50px] rounded p-5"
@@ -110,6 +109,7 @@ const Contact = () => {
               type="text"
               id="email"
               name="email"
+              autoComplete="email"
               value={formData.email}
               onChange={handleChange}
               className="border-2 bg-gray-200 h-[50px] rounded p-5"
