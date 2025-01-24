@@ -7,7 +7,8 @@ import Modal from "./Modal";
 
 const Contact = () => {
   const { theme } = useTheme();
-  const { statusMessage, setStatusMessage } = useModal();
+  const { statusMessage, setStatusMessage, statusHeadline, setStatusHeadline } =
+    useModal();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -25,12 +26,36 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
-    console.log(statusMessage);
+
+    // validation
+
+    if (!formData.name.trim()) {
+      setStatusMessage("Name is required.");
+      setStatusHeadline("Name");
+      return;
+    }
+
+    if (
+      !formData.email.trim() ||
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)
+    ) {
+      setStatusMessage("Please enter a valid email address.");
+      setStatusHeadline("E-mail Address");
+      return;
+    }
+
+    if (!formData.message.trim()) {
+      setStatusMessage("Message cannot be empty.");
+      setStatusHeadline("Message");
+      return;
+    }
+
+    // try catch for EmailJS
 
     try {
       const response = await sendEmail(formData);
 
+      setStatusHeadline("Cheers!");
       setStatusMessage(
         `Thank you ${formData.name}! I'll get back to you as soon as possible!`
       );
@@ -38,7 +63,8 @@ const Contact = () => {
       // reset
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
-      setStatusMessage(`Error sending..${error}`);
+      setStatusHeadline("Error ❌");
+      setStatusMessage(`Error sending.. ${error}`);
     }
   };
 
@@ -113,9 +139,11 @@ const Contact = () => {
       </div>
       {statusMessage && (
         <Modal
+          headline={statusHeadline}
           statusMessage={statusMessage}
           message={() => {
             setStatusMessage("");
+            setStatusHeadline("");
           }}
         />
       )}

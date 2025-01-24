@@ -1,4 +1,4 @@
-const Modal = ({ message, statusMessage }) => {
+const Modal = ({ message, statusMessage, headline }) => {
   return (
     <>
       {/* Darkened Background */}
@@ -7,7 +7,7 @@ const Modal = ({ message, statusMessage }) => {
       {/* Modal */}
       <div className="fixed inset-0 flex items-center justify-center z-50">
         <div className="bg-white rounded-lg shadow-lg max-w-lg w-full mx-4 p-6 sm:w-3/4 md:w-1/2 xl:w-1/3">
-          <h2 className="text-xl font-semibold mb-4">Message Sent!</h2>
+          <h2 className="text-xl font-semibold mb-4">{headline}</h2>
           <p className="text-gray-700 mb-6 text-center">{statusMessage}</p>
           <button
             onClick={message}

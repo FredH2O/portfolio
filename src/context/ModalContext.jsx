@@ -8,8 +8,17 @@ export const useModal = () => {
 
 export const ModalProvider = ({ children }) => {
   const [statusMessage, setStatusMessage] = useState("");
+  const [statusHeadline, setStatusHeadline] = useState("");
+
   return (
-    <ModalContext.Provider value={{ statusMessage, setStatusMessage }}>
+    <ModalContext.Provider
+      value={{
+        statusMessage,
+        setStatusMessage,
+        statusHeadline,
+        setStatusHeadline,
+      }}
+    >
       {children}
     </ModalContext.Provider>
   );
