@@ -6,6 +6,7 @@ import dogBreed from "../images/dog-info.png";
 import rockPaperScissors from "../images/rock-paper-scissors.png";
 import javascriptQuiz from "../images/javascript-quiz.png";
 import todolist from "../images/todo-list.png";
+import foodRecipeGenerator from "../images/food-recipe.png";
 
 const sanitizeURL = (url) => {
   try {
@@ -71,6 +72,13 @@ const otherproject = [
     title: "To-Do List",
     description:
       "The To-Do List Web App helps manage tasks with features to add, edit, delete, and mark as complete. Built with JavaScript, HTML, and CSS, it’s responsive and uses Confetti.js to celebrate completing all tasks.",
+    link: sanitizeURL("https://fredh2o.github.io/To-Do-List/"),
+  },
+  {
+    image: foodRecipeGenerator,
+    title: "Random Food Recipe",
+    description:
+      "Random Food Recipe Generator is a fun and interactive web app that provides users with random recipes at the click of a button. Built with HTML, CSS, and JavaScript, it fetches delicious recipes from an API and displays key details such as ingredients and images. Perfect for meal inspiration and exploring new dishes!",
     link: sanitizeURL("https://fredh2o.github.io/To-Do-List/"),
   },
 ];

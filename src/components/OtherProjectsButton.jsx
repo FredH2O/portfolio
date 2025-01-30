@@ -11,7 +11,7 @@ const OtherProjectsButton = () => {
   };
 
   return (
-    <div className="flex md:justify-end mt-28 pb-12 px-12 w-full justify-center">
+    <div className="flex lg:justify-end mt-28 pb-12 px-12 w-full justify-center">
       <Link to="/Other-Projects" onClick={handleClick}>
         <NextButton title={"Other Projects"} />
       </Link>
